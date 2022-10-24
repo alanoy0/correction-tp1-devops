@@ -44,7 +44,7 @@ jobs:
          context: ./simple-api
          # Note: tags has to be all lower-case
          tags:  ${{secrets.USERNAME}}/dockerhub_tp2_devops:simple-api
-         push: ${{ github.ref == '/main }}
+         push: ${{ github.ref == 'refs/main }}
 
      - name: Build image and push database
        uses: docker/build-push-action@v2 
